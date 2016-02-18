@@ -1,16 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <AssemblyName>netmf.LEDBackpackLibrary</AssemblyName>
-    <OutputType>Library</OutputType>
-    <RootNamespace>netmf.LEDBackpackLibrary</RootNamespace>
+    <AssemblyName>LED_Demo</AssemblyName>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>LED_Demo</RootNamespace>
     <ProjectTypeGuids>{b69e3092-b931-443c-abe7-7e7b65f2a37f};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <ProductVersion>9.0.21022</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{F33036D8-F92A-46CF-B807-D696E19E229A}</ProjectGuid>
+    <ProjectGuid>{8C1DB711-7176-4951-A915-B8B0CFDFFE13}</ProjectGuid>
     <TargetFrameworkVersion>v4.3</TargetFrameworkVersion>
     <NetMfTargetsBaseDir Condition="'$(NetMfTargetsBaseDir)'==''">$(MSBuildExtensionsPath32)\Microsoft\.NET Micro Framework\</NetMfTargetsBaseDir>
-    <TargetFrameworkProfile />
+    <DeployDevice>Netduino</DeployDevice>
+    <DeployTransport>USB</DeployTransport>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -29,15 +30,18 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <Import Project="$(NetMfTargetsBaseDir)$(TargetFrameworkVersion)\CSharp.Targets" />
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="HT16K33_8x8_Matrix.cs" />
+    <Compile Include="Program.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="Microsoft.SPOT.Hardware">
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Microsoft .NET Micro Framework\v4.3\Assemblies\le\Microsoft.SPOT.Hardware.dll</HintPath>
-    </Reference>
+    <Reference Include="System" />
   </ItemGroup>
-  <Import Condition="EXISTS('$(NetMfTargetsBaseDir)$(TargetFrameworkVersion)\CSharp.Targets')" Project="$(NetMfTargetsBaseDir)$(TargetFrameworkVersion)\CSharp.Targets" />
-  <Import Condition="!EXISTS('$(NetMfTargetsBaseDir)$(TargetFrameworkVersion)\CSharp.Targets')" Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <ProjectReference Include="..\netmf.LEDBackpackLibrary\netmf.LEDBackpackLibrary.csproj">
+      <Project>{F33036D8-F92A-46CF-B807-D696E19E229A}</Project>
+      <Name>netmf.LEDBackpackLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
 </Project>

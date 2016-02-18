@@ -8,7 +8,7 @@ namespace netmf.LEDBackpackLibrary
     /// Inspired by the Adafruit-LED-Backpack library.
     /// https://github.com/adafruit/Adafruit-LED-Backpack-Library
     /// </summary>
-    class HT16K33_8x8_Matrix
+    public class HT16K33_8x8_Matrix
     {
         // Basic constant adresses
         private static byte HT16K33_OSC_ON = 0x21; // Oscillator ON 
@@ -65,7 +65,7 @@ namespace netmf.LEDBackpackLibrary
         }
 
         /// <summary>
-        /// Turns on the Oscillator. Turns on the Display. Turns of Blinking. Sets Brightness to full.
+        /// Turns on the Oscillator. Turns on the Display. Turns off Blinking. Sets Brightness to full.
         /// </summary>
         public void Init()
         {
