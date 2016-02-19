@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "netmf.MC.LEDBackpack", "netmf.LEDBackpackLibrary\netmf.MC.LEDBackpack.csproj", "{F33036D8-F92A-46CF-B807-D696E19E229A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "netmf.MC.LEDBackpack", "netmf.MC.LEDBackpack\netmf.MC.LEDBackpack.csproj", "{F33036D8-F92A-46CF-B807-D696E19E229A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Matrix_Demo", "LED_Demo\Matrix_Demo.csproj", "{8C1DB711-7176-4951-A915-B8B0CFDFFE13}"
 EndProject
