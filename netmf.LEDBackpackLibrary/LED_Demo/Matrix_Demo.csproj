@@ -39,9 +39,9 @@
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\netmf.LEDBackpackLibrary\netmf.LEDBackpackLibrary.csproj">
+    <ProjectReference Include="..\netmf.LEDBackpackLibrary\netmf.MC.LEDBackpack.csproj">
       <Project>{F33036D8-F92A-46CF-B807-D696E19E229A}</Project>
-      <Name>netmf.LEDBackpackLibrary</Name>
+      <Name>netmf.MC.LEDBackpack</Name>
     </ProjectReference>
   </ItemGroup>
 </Project>

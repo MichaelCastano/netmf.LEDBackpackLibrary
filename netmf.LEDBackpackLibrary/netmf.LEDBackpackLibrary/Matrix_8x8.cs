@@ -1,6 +1,6 @@
 using Microsoft.SPOT.Hardware;
 
-namespace netmf.LEDBackpackLibrary
+namespace netmf.MC.LEDBackpack.Matrix
 {
     /// <summary>
     /// Class to control an 8x8 Matrix driven by an Holtek HT16K33 IC
@@ -8,7 +8,7 @@ namespace netmf.LEDBackpackLibrary
     /// Inspired by the Adafruit-LED-Backpack library.
     /// https://github.com/adafruit/Adafruit-LED-Backpack-Library
     /// </summary>
-    public class HT16K33_8x8_Matrix
+    public class Matrix_8x8
     {
         // Basic constant adresses
         private static byte HT16K33_OSC_ON = 0x21; // Oscillator ON 
@@ -36,7 +36,7 @@ namespace netmf.LEDBackpackLibrary
         /// Uses the default Adress 0x70 for the Matrix.
         /// And a standard clockrate of 100 kHz.
         /// </summary>
-        public HT16K33_8x8_Matrix()
+        public Matrix_8x8()
         {
             // Uses standard configuration
         }
@@ -46,7 +46,7 @@ namespace netmf.LEDBackpackLibrary
         /// And a standard clockrate of 100 kHz.
         /// </summary>
         /// <param name="adress">7-bit adress of the Device</param>
-        public HT16K33_8x8_Matrix(byte adress)
+        public Matrix_8x8(byte adress)
         {
             HT16K33_ADRESS = adress;
         }
@@ -56,7 +56,7 @@ namespace netmf.LEDBackpackLibrary
         /// </summary>
         /// <param name="adress">7-bit adress of the Device</param>
         /// <param name="clockrate">Clockrate in kHz. Maximum 400</param> 
-        public HT16K33_8x8_Matrix(byte adress, int clockrate)
+        public Matrix_8x8(byte adress, int clockrate)
         {
             HT16K33_ADRESS = adress;
 

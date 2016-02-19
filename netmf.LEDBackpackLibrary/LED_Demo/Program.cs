@@ -1,5 +1,5 @@
 ﻿using System.Threading;
-using netmf.LEDBackpackLibrary;
+using netmf.MC.LEDBackpack.Matrix;
 
 namespace LED_Demo
 {
@@ -8,7 +8,7 @@ namespace LED_Demo
         public static void Main()
         {
             // Create and Initialize Matrix
-            HT16K33_8x8_Matrix myMatrix = new HT16K33_8x8_Matrix();
+            Matrix_8x8 myMatrix = new Matrix_8x8();
             myMatrix.Init();
 
             while (true)
