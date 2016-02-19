@@ -1,4 +1,4 @@
-# netmf.LEDBackpackLibrary
+# netmf.MC.LEDBackpack
 Library to control a 8x8 Matrix with a HT16K33 Backpack
 
 With this Library you can control a 8x8 LED-Matrix which is driven by an Holtek HT16K33 IC.
